@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Toward Low-Latency and Ultra-Reliable Virtual Reality</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-color="rgb(220,220,220)">
+					<p style="color: #ff0000; font-size: 80px">Toward Low-latency and Ultra-Reliable Virtual Reality</p>
+				</section>
+				<section data-background-color="rgb(220,220,220)">
+					<p style="color: #ff0000; font-size: 60px">Content</p>
+					<p style="color: #000000; font-size: 30px">1. Main contribution</p>
+					<p style="color: #000000; font-size: 30px">2. Challenges</p>
+					<p style="color: #000000; font-size: 30px">3. Enablers for URLLC in VR</p>
+					<p style="color: #000000; font-size: 30px">4. Use case and results</p>
+					<p style="color: #000000; font-size: 30px">5. Conclusion</p>
+				</section>
+				<section data-background-color="rgb(220,220,220)">
+					<p style="color: #ff0000; font-size: 60px">1. Main contribution</p>
+					<p style="color: #000000; font-size: 30px"> - Discuss <b>challenges</b> in multi-users mobile VR</p>
+					<p style="color: #000000; font-size: 30px"> - Envision the <b>enablers</b> for Ultra-reliable and Low-latency communications (URLLC) in VR</p>
+					<p style="color: #0000ff; font-size: 20px"> - Reference: Elbamby, Mohammed S., et al. "Toward low-latency and ultra-reliable virtual reality." IEEE Network 32.2 (2018): 78-84.
+					</p>
+				</section>
+				<section data-background-color="rgb(220,220,220)">
+					<p style="color: #ff0000; font-size: 60px">2. Challenges</p>
+					<p style="color: #0000ff; font-size: 40px">- Bandwidth</p>
+					<p style="color: #0000ff; font-size: 40px">- Latency</p>
+					<p style="color: #0000ff; font-size: 40px">- Reliability</p>
+				</section>
+				<section data-background-color="rgb(220,220,220)">
+					<p style="color: #0000ff; font-size: 40px">- Bandwidth</p>
+					<p style="color: #000000; font-size: 30px">1 Gb/s is needed to guarantee real-like view</p>
+					<p style="color: #000000; font-size: 30px">This requirement exceeds the ability of 4G technology</p>
+					<p style="color: #000000; font-size: 30px"><b>Envision possible solution</b>: mmWave communications</p>
+				</section>
+				<section data-background-color="rgb(220,220,220)">
+					<p style="color: #0000ff; font-size: 40px">- Latency</p>
+					<p style="color: #000000; font-size: 30px">Sensor sampling delay: small (< 1 ms)</p>
+					<p style="color: #000000; font-size: 30px">Image processing: expected 5 ms</p>
+					<p style="color: #000000; font-size: 30px">Computing and Communication: up-link is small, down-link is significant</p>
+					<p style="color: #000000; font-size: 30px"><b>Envision possible solution</b>: Mobile edge computing (MEC)</p>
+				</section>
+				<section data-background-color="rgb(220,220,220)">
+					<p style="color: #0000ff; font-size: 40px">- Reliability</p>
+					<p style="color: #000000; font-size: 30px">Delivery of video frames on time with high success rate</p>
+					<p style="color: #000000; font-size: 30px"><b>Envision solution</b>: Multi-connectivity (MC)</p>
+				</section>
+				<section data-background-color="rgb(220,220,220)">
+					<p style="color: #ff0000; font-size: 60px">3. Enablers for URLLC in VR</p>
+					<p style="color: #0000ff; font-size: 40px">- mmWave communication</p>
+					<p style="color: #0000ff; font-size: 40px">- MEC</p>
+				</section>
+				<section data-background-color="rgb(220,220,220)">
+					<p style="color: #0000ff; font-size: 40px">- mmWave communication</p>
+					<p style="color: #000000; font-size: 30px">Cannot propagate well through obstacles such as human body</p>
+					<p style="color: #000000; font-size: 30px">Require line-of-sight (LOS)</p>
+					<p style="color: #000000; font-size: 30px">Track moving users to find strong reflectors to circumvent blocked LOS paths</p>
+					<p style="color: #000000; font-size: 30px">Use signal-to-interference-plus-noise ratio (SINR) as important parameter</p>
+					<p style="color: #000000; font-size: 30px">If SINR drop below a threshold, directional channel discovery process needs to be triggered</p>
+				</section>
+				<section data-background-color="rgb(220,220,220)">
+					<p style="color: #0000ff; font-size: 40px">- MEC</p>
+					<p style="color: #000000; font-size: 30px">No computation in VR headsets to make them light</p>
+					<p style="color: #000000; font-size: 30px">Computations in MEC servers</p>
+					<p style="color: #000000; font-size: 30px">MEC servers: close to users to reduce delay in spacial transmission</p>
+					<p style="color: #000000; font-size: 30px">For real-time applications, such as interactive games, we may predict user's movement, actions, and decisions</p>
+				</section>
+				<section data-background-color="rgb(220,220,220)">
+					<p style="color: #ff0000; font-size: 60px">4. Use case and results</p>
+					<p style="color: #0000ff; font-size: 40px">- Simulations of a multi-players VR game</p>
+					<p style="color: #0000ff; font-size: 40px">- Comparison with reactive computing (Baseline 1) and proactive computing (Baseline 2)</p>
+				</section>
+				<section data-background-color="rgb(220,220,220)">
+					<p style="color: #0000ff; font-size: 40px">- Simulations of a multi-players VR game</p>
+					<p style="color: #000000; font-size: 30px">Up to 16 players</p>
+					<p style="color: #000000; font-size: 30px">Players move freely within individual VR pods</p>
+					<img src="images/VRgame.png" width="456px" height="303px">
+				</section>
+				<section data-background-color="rgb(220,220,220)">
+					<p style="color: #0000ff; font-size: 40px">- Comparison with reactive computing (Baseline 1) and proactive computing (Baseline 2)</p>
+					<p style="color: #000000; font-size: 30px">Latency performance: proposed approach significantly minimizes the delay in different conditions</p>
+					<img src="images/LatencyPerformance.png" width="364" height="296">
+				</section>
+				<section data-background-color="rgb(220,220,220)">
+					<p style="color: #0000ff; font-size: 40px">- Comparison with reactive computing (Baseline 1) and proactive computing (Baseline 2)</p>
+					<p style="color: #000000; font-size: 30px">Reliability, latency, and rate trade-offs</p>
+					<img src="images/TradeOff.png" width="352" height="286">
+				</section>
+				<section data-background-color="rgb(220,220,220)">
+					<p style="color: #0000ff; font-size: 40px">- Comparison with reactive computing (Baseline 1) and proactive computing (Baseline 2)</p>
+					<p style="color: #000000; font-size: 30px">Average delay performance</p>
+					<img src="images/final.png" width="386" height="262">
+				</section>
+				<section data-background-color="rgb(220,220,220)">
+					<p style="color: #ff0000; font-size: 60px">5. Conclusion</p>
+					<p style="color: #000000; font-size: 30px">The paper has highlighted the limitations of today's VR applications and presented the key enablers to achieve the vision of future ultra-reliable and low latency VR</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'c/t',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
